@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8" />
+  <title>SICAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+  <!-- CSS CALENDAR -->
+  <!-- <link href="assets/libs/%40fullcalendar/core/main.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/%40fullcalendar/daygrid/main.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/%40fullcalendar/bootstrap/main.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/%40fullcalendar/timegrid/main.min.css" rel="stylesheet" type="text/css" /> -->
+
+  <!-- Bootstrap Css -->
+  <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+  <!-- Icons Css -->
+  <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <!-- App Css-->
+  <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+  <!-- Main Css-->
+  <link href="assets/css/index.css" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-sidebar="dark" data-layout-mode="light">
+
+  <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+  <!-- Begin page -->
+  <div id="layout-wrapper">
+
+
+    <header id="page-topbar">
+      <div class="navbar-header">
+        <div class="d-flex">
+          <!-- LOGO -->
+          <div class="navbar-brand-box">
+            <a href="index.html" class="logo logo-dark">
+              <span class="logo-sm">
+                <img src="assets/images/logo.svg" alt="" height="22">
+              </span>
+              <span class="logo-lg">
+                <img src="assets/images/logo-dark.png" alt="" height="17">
+              </span>
+            </a>
+
+            <a href="index.html" class="logo logo-light">
+              <span class="logo-sm">
+                <img src="assets/images/logo-light.svg" alt="" height="22">
+              </span>
+              <span class="logo-lg">
+                <img src="assets/images/logo-light.png" alt="" height="19">
+              </span>
+            </a>
+          </div>
+
+          <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+            <i class="fa fa-fw fa-bars"></i>
+          </button>
+
+          <div style="display: flex; align-items: center;">
+            <h4 class="titulo_municipio">SEC. MUN. DE EDUCAÇÃO DE BARREIROS</h4>
+          </div>
+
+        </div>
+
+        <div class="d-flex">
+
+          <div class="dropdown d-inline-block">
+            <button type="button" class="btn header-item noti-icon waves-effect">
+              <i class="bx bx-moon"></i>
+            </button>
+          </div>
+
+          <div class="dropdown d-inline-block">
+            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bx bx-bell bx-tada"></i>
+              <span class="badge bg-danger rounded-pill">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+              aria-labelledby="page-header-notifications-dropdown">
+              <div class="p-3">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                  </div>
+                  <div class="col-auto">
+                    <a href="#!" class="small" key="t-view-all"> View All</a>
+                  </div>
+                </div>
+              </div>
+              <div data-simplebar style="max-height: 230px;">
+                <a href="javascript: void(0);" class="text-reset notification-item">
+                  <div class="d-flex">
+                    <div class="avatar-xs me-3">
+                      <span class="avatar-title bg-primary rounded-circle font-size-16">
+                        <i class="bx bx-cart"></i>
+                      </span>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="javascript: void(0);" class="text-reset notification-item">
+                  <div class="d-flex">
+                    <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1">James Lemire</h6>
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="javascript: void(0);" class="text-reset notification-item">
+                  <div class="d-flex">
+                    <div class="avatar-xs me-3">
+                      <span class="avatar-title bg-success rounded-circle font-size-16">
+                        <i class="bx bx-badge-check"></i>
+                      </span>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="javascript: void(0);" class="text-reset notification-item">
+                  <div class="d-flex">
+                    <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1">Salena Layfield</h6>
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="p-2 border-top d-grid">
+                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                  <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown d-none d-lg-inline-block ms-1">
+            <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+              <i class="bx bx-fullscreen"></i>
+            </button>
+          </div>
+
+          <div class="dropdown d-inline-block">
+            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                alt="Header Avatar">
+              <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+              <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+
+              <a class="dropdown-item" href="#">
+                <i class="bx bx-user font-size-16 align-middle me-1"></i>
+                <span key="t-profile">Perfil</span>
+              </a>
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-danger" href="#">
+                <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                <span key="t-logout">Sair</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="vertical-menu">
+
+      <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+          <!-- Left Menu Start -->
+          <ul class="metismenu list-unstyled" id="side-menu">
+            <li class="menu-title" key="t-menu">Menu</li>
+
+            <li>
+              <a href="index.html" class="waves-effect">
+                <i class="mdi mdi-home"></i>
+                <span>Início</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="relatorios.html" class="waves-effect">
+                <i class="mdi mdi-file-chart-outline"></i>
+                <span>Relatórios</span>
+              </a>
+            </li>
+            <li>
+              <a href="linha_do_tempo.html" class="waves-effect">
+                <i class="mdi mdi-arrow-decision"></i>
+                <span>Linha do tempo</span>
+              </a>
+            </li>
+            <li>
+              <a href="perfil.html" class="waves-effect">
+                <i class="bx bx-user"></i>
+                <span>Perfil</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <!-- Sidebar -->
+      </div>
+    </div>
+
+
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-sm-0 font-size-18">Linha do tempo</h4>
+
+                <div class="page-title-right">
+                  <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Início</a></li>
+                    <li class="breadcrumb-item active">Linha do tempo</li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+
+                  <div class="d-flex">
+                    <button  class="btn btn-primary" onclick="abrir_modal_cad_evento();">Cadastrar Eventos</button>
+                  </div>
+
+                  <div class="d-flex mt-3" style="justify-content: end; gap: 3px;align-items: center;">
+                    <span><b>Modo de vizualização</b></span>
+                    <button title="Linha do tempo" class="btn btn-sm btn-light" onclick="alterar_visualizacao(1);"><i
+                        class="mdi mdi-clipboard-list-outline"></i></button>
+                    <button title="Calendário" class="btn btn-sm btn-light" onclick="alterar_visualizacao(2);"><i
+                        class="mdi mdi-calendar"></i></button>
+                  </div>
+
+                  <div class="row container_timeline_main">
+                    <div class="col-lg-4 p-4">
+                      <div class="mt-4">
+                        <ul class="verti-timeline list-unstyled">
+                          <li class="event-list" id="template-evento" style="display:none;">
+                            <div class="event-timeline-dot">
+                              <i class="bx bx-right-arrow-circle"></i>
+                            </div>
+                            <div class="d-flex linha_movimentacao_timeline cont_pressed_info_card" data-evento=""
+                              titulo-evento="" descricao-evento="" arquivo-evento='[]'>
+                              <div class="flex-shrink-0 me-3">
+                                <i class="bx bx-calendar-plus h2 text-primary"></i>
+                              </div>
+                              <div class="flex-grow-1">
+                                <div>
+                                  <h5><b></b></h5>
+                                  <p class="text-muted">Evento a ser realizado - </p>
+                                  <div>
+                                    <img class="rounded-circle avatar-xs mini_ft_timeline"
+                                      src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                                    <img class="rounded-circle avatar-xs mini_ft_timeline"
+                                      src="assets/images/users/avatar-6.jpg" alt="Header Avatar">
+                                    <img class="rounded-circle avatar-xs mini_ft_timeline"
+                                      src="assets/images/users/avatar-4.jpg" alt="Header Avatar">
+                                    <img class="rounded-circle avatar-xs mini_ft_timeline"
+                                      src="assets/images/users/avatar-2.jpg" alt="Header Avatar">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8 p-4">
+                      <div class="card_detalhes_eventos_timeline d-none">
+                        <div class="d-flex justify-content-end">
+                          <a href="javascript:fechar_cont_info_eventos();" class="fs-5 text-decoration-none">X</a>
+                        </div>
+
+                        <div class="mt-4">
+                          <h4 class="text-center info_titulo_cad_evento"></h4>
+
+                          <div class="col-lg-12 mt-3">
+                            <h5>Descrição</h5>
+                            <textarea class="text_area_descricao form-control" rows="10" id="descricao_evento"
+                              readonly></textarea>
+                          </div>
+
+                          <div class="col-lg-12 mt-3">
+                            <h5>Anexos</h5>
+                            <div class="table-responsive">
+                              <table class="table table-sm mb-0 text-center">
+                                <thead class="table-light">
+                                  <tr>
+                                    <th>#</th>
+                                    <th>Descrição</th>
+                                    <th>Ação</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="tbody-anexos">
+                                  <!-- Linhas de anexos aqui -->
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- Template para anexos -->
+                    <template id="template-anexo">
+                      <tr>
+                        <th class="num-anexo"></th>
+                        <td class="nome-anexo"></td>
+                        <td>
+                          <div class="d-flex justify-content-center gap-1">
+                            <a class="btn btn-primary btn-visualizar" target="_blank" href="#">
+                              <i class="mdi mdi-eye"></i>
+                            </a>
+                            <a class="btn btn-primary btn-download" download href="#">
+                              <i class="mdi mdi-download"></i>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </template>
+
+                  </div>
+
+                  <div class="row container_timeline_calendar_main" style="display:none;">
+                    <div class="col-lg-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <div id="calendar"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal_card_visualizacao modal-xl">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content d-flex flex-column">
+
+          <div class="modal-header py-3 px-4 border-bottom-0 align-items-center justify-content-center text-center">
+            <h5 class="modal-title" id="modal-title"></h5>
+            <button type="button" class="btn-close position-absolute end-0 me-4" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body p-4 flex-grow-1 overflow-auto">
+
+            <div class="row mb-4">
+              <div class="col-lg-12">
+                <label for="descricao" class="fs-4 mb-2">Descrição</label>
+                <textarea id="descricao" class="form-control" rows="6">
+
+            </textarea>
+              </div>
+            </div>
+
+            <h5 class="modal-title align-items-center mb-3">ANEXOS</h5>
+
+            <table class="table">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Anexos</th>
+                  <th scope="col">Ação</th>
+                </tr>
+              </thead>
+              <tbody id="anexos_tbody">
+
+              </tbody>
+              <template id="template-anexos">
+                <tr>
+                  <th class="num-anexos" scope="row"></th>
+                  <td class="nome-anexos"></td>
+                  <td>
+                    <div class="d-flex justify-content-center gap-1">
+                      <a class="btn btn-primary btn-visualizar" target="_blank" href="#">
+                        <i class="mdi mdi-eye"></i>
+                      </a>
+                      <a class="btn btn-primary btn-download" download href="#">
+                        <i class="mdi mdi-download"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </template>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade modal_cad_evento" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div id="container_form_evento">
+            <div class="modal-header py-3 px-4 border-bottom-0">
+              <h5 class="modal-title" id="modal-title">Cadastrar Evento</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body p-4">
+              <div class="row">
+                <div class="col-lg-12">
+                  <label for="nome_evento">Nome do Evento</label>
+                  <input type="text" class="form-control" id="nome_evento" required>
+                </div>
+
+                <div class="col-lg-12 mt-3">
+                  <label for="data_evento">Data do Evento</label>
+                  <input type="date" class="form-control" id="data_evento" required>
+                </div>
+
+                <div class="col-lg-12 mt-3">
+                  <label for="descricao_evento_cadastro">Descrição do Evento</label>
+                  <textarea id="descricao_evento_cadastro" class="form-control" rows="5" required></textarea>
+                </div>
+
+                <div class="col-lg-12 mt-3">
+                  <label for="arquivo_evento">Arquivo</label>
+                  <input type="file" class="form-control" id="arquivo_evento" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary" onclick="cadastrar_evento(event);">Salvar</button>
+            </div>
+
+            <div id="alertaEvento" class="alert d-none mt-3" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            2016 -
+            <script>document.write(new Date().getFullYear())</script>
+          </div>
+          <div class="col-sm-6">
+            <div class="text-sm-end d-none d-sm-block">
+              SICAP Soluções
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+  <script src="assets/libs/simplebar/simplebar.min.js"></script>
+  <script src="assets/libs/node-waves/waves.min.js"></script>
+
+  <!-- plugin js -->
+  <!-- <script src="assets/libs/moment/min/moment.min.js"></script>
+        <script src="assets/libs/jquery-ui-dist/jquery-ui.min.js"></script>
+        <script src="assets/libs/%40fullcalendar/core/main.min.js"></script>
+        <script src="assets/libs/%40fullcalendar/bootstrap/main.min.js"></script>
+        <script src="assets/libs/%40fullcalendar/daygrid/main.min.js"></script>
+        <script src="assets/libs/%40fullcalendar/timegrid/main.min.js"></script>
+        <script src="assets/libs/%40fullcalendar/interaction/main.min.js"></script> -->
+
+  <!-- Calendar init -->
+  <!-- <script src="assets/js/pages/calendars-full.init.js"></script> -->
+
+  <!-- FULL CALENDAR -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+
+  <!-- apexcharts -->
+  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+  <!-- App js -->
+  <script src="assets/js/app.js"></script>
+
+  <!-- Main js -->
+  <script src="assets/js/linha_do_tempo.js"></script>
+</body>
+
+</html>
