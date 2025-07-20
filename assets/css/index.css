@@ -1,0 +1,58 @@
+@media (max-width: 983px) {
+  .navbar-brand-box{
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo_municipio{
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 983px) {
+  .navbar-brand-box{
+    display: none !important;
+  }
+}
+
+.linha_movimentacao_timeline{
+  cursor: pointer;
+}
+
+.linha_movimentacao_timeline:hover{
+  transform: scale(1.1, 1.2);
+  transition: 300ms;
+}
+
+.mini_ft_timeline{
+  margin-right: -10px
+}
+
+.mini_ft_timeline:hover{
+  transform: scale(1.5);
+}
+
+.card_detalhes_eventos_timeline{
+  box-shadow: 2px 3px 3px 10px #eeeeee;
+  padding: 25px;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .dropdown_pers {
+    left: 10px !important;
+    right: 10px !important;
+  }
+}
+
+@media (max-width: 600px) {
+    .cont_drop_filtro_rels {
+        position:static
+    }
+
+    .dropdown_config_rel {
+        left: 10px!important;
+        right: 10px!important
+    }
+}

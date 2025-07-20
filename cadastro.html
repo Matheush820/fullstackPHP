@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Cadastro | Skote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Tela de Cadastro - Skote" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" />
+</head>
+
+<body class="auth-body-bg">
+    <div>
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                
+                <!-- Lado esquerdo com imagem e carousel -->
+                <div class="col-xl-9">
+                    <div class="auth-full-bg pt-lg-5 p-4">
+                        <div class="bg-overlay"></div>
+                        <div class="d-flex h-100 flex-column">
+                            <div class="p-4 mt-auto">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-7">
+                                        <div class="text-center">
+                                            <h4 class="mb-3">
+                                                <i class="bx bxs-quote-alt-left text-primary h1 align-middle me-3"></i>
+                                                <span class="text-primary">5k</span>+ Clientes Satisfeitos
+                                            </h4>
+                                            <div class="owl-carousel owl-theme auth-review-carousel" id="auth-review-carousel">
+                                                <div class="item">
+                                                    <p class="font-size-16 mb-4">"Excelente tema com muitos recursos. Muito fácil de integrar ao meu projeto."</p>
+                                                    <h4 class="font-size-16 text-primary">Abs1981</h4>
+                                                    <p class="font-size-14 mb-0">- Skote User</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="font-size-16 mb-4">"Suporte incrível! Recomendo fortemente esse template."</p>
+                                                    <h4 class="font-size-16 text-primary">nezerious</h4>
+                                                    <p class="font-size-14 mb-0">- Skote User</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lado direito com o formulário -->
+                <div class="col-xl-3">
+                    <div class="auth-full-page-content p-md-5 p-4">
+                        <div class="w-100">
+                            <div class="d-flex flex-column h-100">
+                                <div class="mb-4 mb-md-5">
+                                    <a href="index.html" class="d-block auth-logo">
+                                        <img src="assets/images/logo-dark.png" alt="" height="18" class="auth-logo-dark">
+                                        <img src="assets/images/logo-light.png" alt="" height="18" class="auth-logo-light">
+                                    </a>
+                                </div>
+                                <div class="my-auto">
+                                    <div>
+                                        <h5 class="text-primary">Crie sua conta</h5>
+                                        <p class="text-muted">Preencha os dados abaixo para se registrar.</p>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <form onsubmit="event.preventDefault(); criar_usuario_sicap();">
+                                            <div class="mb-3">
+                                                <label for="nome_usuario" class="form-label">Nome</label>
+                                                <input type="text" class="form-control nome_usuario" id="nome_usuario" placeholder="Digite seu nome completo">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email_usuario" class="form-label">Email</label>
+                                                <input type="email" class="form-control email_usuario" id="email_usuario" placeholder="Digite seu e-mail">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="senha_usuario" class="form-label">Senha</label>
+                                                <input type="password" class="form-control senha_usuario" id="senha_usuario" placeholder="Digite sua senha">
+                                            </div>
+
+                                            <div class="mt-3 d-grid">
+                                                <button class="btn btn-primary waves-effect waves-light" type="submit">Cadastrar</button>
+                                            </div>
+
+                                            <div class="mt-4 text-center">
+                                                <p>Já possui uma conta? <a href="login.html" class="fw-medium text-primary"> Entrar </a></p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 mt-md-5 text-center">
+                                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Skote. Feito com <i class="mdi mdi-heart text-danger"></i> por Themesbrand</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end row -->
+        </div> <!-- end container-fluid -->
+    </div>
+
+    <!-- JS -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/pages/auth-2-carousel.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script src="assets/js/usuario.js"></script>
+</body>
+</html>
